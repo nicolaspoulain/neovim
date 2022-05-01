@@ -40,6 +40,21 @@ Plug 'scrooloose/nerdtree'
 nnoremap <Leader>e  :NERDTreeToggle<Cr>
 nnoremap <C-e>  :NERDTreeToggle<Cr>
 "}
+" ULTISNIPS/VIM-SNIPPETS - The ultimate snippet solution for Vim {
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
+if has('python3')
+  let g:UltiSnipsUsePythonVersion = 3
+elseif has('python')
+  let g:UltiSnipsUsePythonVersion = 2
+endif
+
+" Le dossier par défaut est vim ~/.vim/bundle/vim-snippets/snippets/
+" On ajoute ~/.vim/bundle/vim-snippets/UltiSnips et ~/.vim/my-snippets
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my-snippets"]
+" }
 " FZF fuzzy find {
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
